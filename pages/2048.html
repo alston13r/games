@@ -11,11 +11,176 @@
 
   <script defer src='../scripts/2048.js'></script>
 
+  <style>
+    .tile {
+      --size: 120px;
+
+      font-family: Consolas, Arial;
+
+      display: inline-block;
+      position: absolute;
+      user-select: none;
+
+      width: var(--size);
+      height: var(--size);
+      border-radius: calc(var(--size) / 10);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      background-color: lightgreen;
+
+      container-type: inline-size;
+    }
+
+    .tile.tile-empty {
+      background-color: #C9C0B3;
+    }
+
+    .tile.tile-val-2 {
+      background-color: #ECE8DC;
+      color: #7B7263;
+    }
+
+    .tile.tile-val-4 {
+      background-color: #EBDFC7;
+      color: #7B7263;
+    }
+
+    .tile.tile-val-8 {
+      background-color: #F3B177;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-16 {
+      background-color: #F59467;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-32 {
+      background-color: #F57C5F;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-64 {
+      background-color: #F85D3E;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-128 {
+      background-color: #EBCE72;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-256 {
+      background-color: #EECC60;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-512 {
+      background-color: #ECC850;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-1024 {
+      background-color: #ECC441;
+      color: #F9EDDD;
+    }
+
+    .tile.tile-val-2048 {
+      background-color: #EDC12D;
+      color: #F9EDDD;
+    }
+
+    /* const colors = {
+  background: {
+    empty: '#C9C0B3',
+
+  },
+  foreground: {
+    tile2: '#7B7263',
+    tile4: '#7B7263',
+    tile8: '#F9EDDD',
+    tile16: '#F9EDDD',
+    tile32: '#F9EDDD',
+    tile64: '#F9EDDD',
+    tile128: '#F9EDDD',
+    tile256: '#F9EDDD',
+    tile512: '#F9EDDD',
+    tile1024: '#F9EDDD',
+    tile2048: '#F9EDDD',
+  }
+} */
+
+
+
+
+    p.tile-textW-1,
+    p.tile-textW-2 {
+      font-size: 60cqw;
+    }
+
+    p.tile-textW-3 {
+      font-size: 50cqw;
+    }
+
+    p.tile-textW-4 {
+      font-size: 40cqw;
+    }
+  </style>
+
 </head>
 
 <body>
 
-  <canvas id='main'></canvas>
+  <div class='tile tile-val-2'>
+    <p class='tile-textW-1'>2</p>
+  </div>
+
+  <div class='tile tile-val-4'>
+    <p class='tile-textW-1'>4</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-1'>8</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-2'>16</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-2'>32</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-2'>64</p>
+  </div>
+
+  <div class='tile tile-val-128'>
+    <p class='tile-textW-3'>128</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-3'>256</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-3'>512</p>
+  </div>
+
+  <div class='tile'>
+    <p class='tile-textW-4'>1024</p>
+  </div>
+
+  <div class='tile tile-val-2048'>
+    <p class='tile-textW-4'>2048</p>
+  </div>
+
+  <div class='tile tile-empty'>
+  </div>
 
 </body>
 
